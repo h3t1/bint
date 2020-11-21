@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1579550777 source:c:\users\hamza\desktop\iddl\sda\tp2\bint\main.cpp
+	"resource.h"
+	"bint.h"
+	"bint.c"
+
+1574375668 source:c:\users\hamza\desktop\iddl\sda\tp2\bint\resource.rc
+	"resource.h"
+
+1574375589 c:\users\hamza\desktop\iddl\sda\tp2\bint\resource.h
+	<windows.h>
+	<tchar.h>
+
+1577061443 source:c:\users\hamza\desktop\iddl\sda\tp2\bint\bint.c
+	"bint.h"
+
+1579660632 c:\users\hamza\desktop\iddl\sda\tp2\bint\bint.h
+	<windows.h>
+	<stdio.h>
+	<limits.h>
+
+1577061443 c:\users\hamza\desktop\iddl\sda\tp2\bint\bint.c
+	"bint.h"
+
+1585843315 source:c:\users\dell\desktop\iddl\sda\tp2\bint\bint.c
+	"bint.h"
+
+1585843315 c:\users\dell\desktop\iddl\sda\tp2\bint\bint.h
+	<windows.h>
+	<stdio.h>
+	<limits.h>
+
+1585843314 source:c:\users\dell\desktop\iddl\sda\tp2\bint\main.cpp
+	"resource.h"
+	"bint.h"
+	"bint.c"
+
+1585843311 c:\users\dell\desktop\iddl\sda\tp2\bint\resource.h
+	<windows.h>
+	<tchar.h>
+
+1585843315 c:\users\dell\desktop\iddl\sda\tp2\bint\bint.c
+	"bint.h"
+

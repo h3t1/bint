@@ -1,0 +1,38 @@
+#include "resource.h"
+IDI_BINT ICON "bint.ico"
+IDR_MENU MENU
+{
+    POPUP "&File"
+    {
+        MENUITEM "Quitter\tAlt+F4", IDM_CLOSE
+    }
+    POPUP "&Edit"{
+        MENUITEM "Tout sélectionner\tCtrl+A",IDM_SELECT_ALL
+        MENUITEM "Coller\tCtrl+V", IDM_PASTE
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "À propos", ID_HELP_ABOUT
+    }
+}
+
+IDD_ABOUT DIALOG 0, 0, 225, 89
+STYLE DS_CENTER | DS_MODALFRAME | DS_SHELLFONT | WS_CAPTION | WS_VISIBLE | WS_POPUP | WS_SYSMENU
+EXSTYLE WS_EX_WINDOWEDGE
+CAPTION "À propos"
+FONT 8, "Ms Shell Dlg"
+{
+    LTEXT           "Manipulation des grands nombres avec listes chainées\r\nAuteur: Hamza Talaghzi\r\nVersion: 1.00\r\n\r\nInterface graphique réalisée à l'aide de l'API Win32", 0, 13, 21, 198, 33, SS_LEFT, WS_EX_LEFT
+    GROUPBOX        "", 0, 5, 5, 215, 60, 0, WS_EX_LEFT
+    DEFPUSHBUTTON   "OK", IDOK, 170, 70, 50, 14, 0, WS_EX_LEFT
+}
+ACC ACCELERATORS
+{
+"A", IDM_SELECT_ALL, CONTROL, VIRTKEY
+VK_EQUALS, IDC_EQ, VIRTKEY
+106, IDC_SUB, VIRTKEY
+VK_DIVIDE, IDC_DIV, VIRTKEY
+VK_RETURN, IDC_ENTER, VIRTKEY
+"=", IDC_ENTER, VIRTKEY
+
+}

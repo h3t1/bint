@@ -31,14 +31,15 @@ Nous voulons garantir que:</br>
    1. La formule pour calculer la taille maximale des paquets pour les opérations +, -, /, % :</br>
 `max_p = nombre_chiffres(ULLONG_MAX) − 2`</br>
 En langage C: 
-```c
-max_p = snprintf(NULL , 0 , "%llu", ULLONG_MAX) - 2;
-```
+   ```c
+   max_p = snprintf(NULL , 0 , "%llu", ULLONG_MAX) - 2;
+   ```
    2. La formule pour calculer la taille de paquet pour l’opération de multiplication ∗ est:</br>
 ![equ](https://render.githubusercontent.com/render/math?math=max\_p%20=%20\frac{\text{nombre\_chiffres(ULLONG\_MAX)}}{2}-1)</br>
 En langage C:
-```c
-max_p = snprintf(NULL , 0 , "%llu", ULLONG_MAX)/2 - 1;
-```
+   ```c
+   max_p = snprintf(NULL , 0 , "%llu", ULLONG_MAX)/2 - 1;
+   ```
 4. Déterminer le nombre de paquets à insérer pour une chaîne donnée:
+   - Le nombre de paquets:
 

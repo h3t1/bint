@@ -3,6 +3,7 @@
 #include <windows.h>
 #include <stdio.h>
 #include <limits.h>
+#include <stdbool.h>
 typedef struct node
 {
     unsigned long long packet;

@@ -5,13 +5,13 @@
 #endif
 #include "resource.h"
 #include "bint.h"
-#include "bint.c"
+
 /*  Declare Windows procedure  */
 LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
 LRESULT CALLBACK SubProc (HWND, UINT, WPARAM, LPARAM) ;
 WNDPROC SubbedProc;
 WNDPROC	oldEditWndProc;
-Bint n = init();
+Bint n;
 /*  Make the class name into a global variable  */
 TCHAR szClassName[ ] = _T("CodeBlocksWindowsApp");
 int WINAPI WinMain (HINSTANCE hThisInstance,

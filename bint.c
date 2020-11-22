@@ -180,27 +180,29 @@ Bint dm(Bint a,Bint b,char op,HWND hwnd)
         {
             coef = 0;
             diff = get_length(a) - get_length(b);
-            Bint tmp = parse_str(read(b,hwnd),'*',hwnd); // tmp=b
-            tmp = mul(rfwz(1,diff-1,'*',hwnd),tmp,hwnd);// tmp=b*10^diff
+            Bint tmp = parse_str(read(b,hwnd),'*',hwnd);/* tmp=b */
+            tmp = mul(rfwz(1,diff-1,'*',hwnd),tmp,hwnd);/* tmp=b*10^diff */
 
-            while(cmp(a,tmp,hwnd)>=0)// while a>tmp: a=a-tmp; coef++;
+            while(cmp(a,tmp,hwnd)>=0)/* while a>tmp: a=a-tmp; coef++; */
             {
                 a = sub(a,tmp,hwnd);
-                //MessageBoxA(hwnd,read(a,hwnd),"a",0);
-                //MessageBoxA(hwnd,read(tmp,hwnd),"tmp",0);
+                /*MessageBoxA(hwnd,read(a,hwnd),"a",0);*/
+                /*MessageBoxA(hwnd,read(tmp,hwnd),"tmp",0);*/
                 coef++;
             }
-            //MessageBoxA(hwnd,read(tmp,hwnd),"tmp",0);
-            if(op=='/'){
-                r = add(r,rfwz(coef,diff,'+',hwnd),hwnd);//r = r + coef*10^diff
+            /*MessageBoxA(hwnd,read(tmp,hwnd),"tmp",0);*/
+            if(op=='/')
+            {
+                r = add(r,rfwz(coef,diff,'+',hwnd),hwnd);/*r = r + coef*10^diff*/
             }
-            //MessageBoxA(hwnd,read(r,hwnd),"r",0);
+            /*MessageBoxA(hwnd,read(r,hwnd),"r",0);*/
         }
     }
     if(op=='%')
         r = add(r,a,hwnd);
-    //MessageBoxA(hwnd,"s",NULL,0);
-    //r._dir = TRUE;
+    /*MessageBoxA(hwnd,"s",NULL,0);
+      r._dir = TRUE;
+        */
     return r;
 }
 
@@ -300,8 +302,8 @@ Bint sub(Bint a, Bint b, HWND hwnd)
         }
     }
     c._dir=TRUE;
-    //return c;
-    //readn(carry,"carry",hwnd);
+    /*return c;
+    readn(carry,"carry",hwnd);*/
     return rlz(c,hwnd);
 }
 Bint add(Bint a,Bint b,HWND hwnd)
@@ -449,7 +451,7 @@ Bint parse_str(char* str,char op,HWND hwnd)
     {
         char buf[244];
         sprintf(buf,"%d",last_p);
-        //MessageBoxA(hwnd,buf,"parse_bint",NULL);
+        /*MessageBoxA(hwnd,buf,"parse_bint",NULL);*/
         strncpy(tmp,str,last_p);
         tmp[last_p]='\0';
         n=concat(n,atoll(tmp),hwnd);

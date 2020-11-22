@@ -43,7 +43,7 @@
 		<Unit filename="bint.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="main.cpp" />
+		<Unit filename="main.c" />
 		<Unit filename="resource.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />

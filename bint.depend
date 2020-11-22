@@ -22,13 +22,14 @@
 1577061443 c:\users\hamza\desktop\iddl\sda\tp2\bint\bint.c
 	"bint.h"
 
-1585843315 source:c:\users\dell\desktop\iddl\sda\tp2\bint\bint.c
+1606017312 source:c:\users\dell\desktop\iddl\sda\tp2\bint\bint.c
 	"bint.h"
 
-1585843315 c:\users\dell\desktop\iddl\sda\tp2\bint\bint.h
+1606001716 c:\users\dell\desktop\iddl\sda\tp2\bint\bint.h
 	<windows.h>
 	<stdio.h>
 	<limits.h>
+	<stdbool.h>
 
 1585843314 source:c:\users\dell\desktop\iddl\sda\tp2\bint\main.cpp
 	"resource.h"
@@ -41,4 +42,11 @@
 
 1585843315 c:\users\dell\desktop\iddl\sda\tp2\bint\bint.c
 	"bint.h"
+
+1606017485 source:c:\users\dell\desktop\iddl\sda\tp2\bint\main.c
+	"resource.h"
+	"bint.h"
+
+1604791664 source:c:\users\dell\desktop\iddl\sda\tp2\bint\resource.rc
+	"resource.h"
 

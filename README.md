@@ -29,13 +29,13 @@ Nous voulons garantir que:</br>
 ∀*p1, p2* deux paquets de taille *n* chiffres, ∀α ∈ {+, −, ∗, /, %}</br>
 *p1αp2 = p3* avec *p3* est un paquet de taille toujours inférieure ou égale à *n*.</br>
    1. La formule pour calculer la taille maximale des paquets pour les opérations +, -, /, % :</br>
-`max_p = nombre_chiffres(ULLONG_MAX) − 2`</br>
+![equ](https://render.githubusercontent.com/render/math?math=\text{max\_p}%20=%20\text{nombre\_chiffres(ULLONG\_MAX)}-2)
 En langage C: 
    ```c
    max_p = snprintf(NULL , 0 , "%llu", ULLONG_MAX) - 2;
    ```
    2. La formule pour calculer la taille de paquet pour l’opération de multiplication ∗ est:</br>
-![equ](https://render.githubusercontent.com/render/math?math=max\_p%20=%20\frac{\text{nombre\_chiffres(ULLONG\_MAX)}}{2}-1)</br>
+![equ](https://render.githubusercontent.com/render/math?math=\text{max\_p}%20=%20\frac{\text{nombre\_chiffres(ULLONG\_MAX)}}{2}-1)</br>
 En langage C:
    ```c
    max_p = snprintf(NULL , 0 , "%llu", ULLONG_MAX)/2 - 1;

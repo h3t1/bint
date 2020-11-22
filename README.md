@@ -42,13 +42,13 @@ Nous voulons garantir que:</br>
    ```
 4. ****Déterminer le nombre de paquets à insérer pour une chaîne donnée:****
    - Le nombre de paquets:</br>![equ](https://render.githubusercontent.com/render/math?math=$nb%20=%20\frac{\text{strlen(str)}}{\text{max\_p}}$)
-   - La taille du dernier paquet à insérer:</br><MATH>last_p = strlen(str) (*mod* max_p)</MATH></br>
+   - La taille du dernier paquet à insérer:</br>last_p = strlen(str) (*mod* max_p)</br>
    ![equ](https://render.githubusercontent.com/render/math?math=Avec%3A%5Cbegin%7Bcases%7D%0A%5Ctextit%7Bstrlen()%3A%7D%5Ctext%7Best%20une%20fonction%20qui%20permet%20de%20calculer%20la%20longueur%20d'une%20cha%C3%AEne%20de%20caract%C3%A8res%7D%5C%5C%0A%20%20%5Ctextit%7Bstr%3A%7D%5Ctext%7Best%20la%20cha%C3%AEne%20entr%C3%A9%20par%20l'utilisateur%7D%5C%5C%0A%5Ctextit%7Bmax%5C_p%3A%7D%5Ctext%7Best%20la%20taille%20de%20paquet%20calcul%C3%A9e%20pr%C3%A9c%C3%A9demment%20%C3%A0%20l'%C3%A9tape%20(3)%7D%5C%5C%0A%5Cend%7Bcases%7D)
 5. ****Insérer les paquets dans une structure de données chaînée**** (Voir la figure ci-dessous)
 <p align="center">
-  <img src="img/i2.png" alt="May's word cloud"  width="520px">
+  <img src="img/i2.png" alt="Bint"  width="520px">
   <p align="center">Fig1: Structure de données utilisée pour stocker les grands nombres</p>
 </p>
-L'opération d’insertion se fait toujours en tête de liste, cela permet de réduire la complexité de la conversion (chaîne de caractères → liste chainée) en *O(nb)* où *nb* est le nombre de paquets précédemment calculé à l’étape (4).
+L'opération d’insertion se fait toujours en tête de liste, cela permet de réduire la complexité de la conversion (chaîne de caractères → liste chainée) en _O(nb)_ où __nb__ est le nombre de paquets précédemment calculé à l’étape (4).
 
 6. ****Insérer les paquets dans une structure de données chaînée**** 

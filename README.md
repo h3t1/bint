@@ -48,12 +48,20 @@ Nous voulons garantir que:</br>
 <p align="center">
   <img src="img/i2.png" alt="Bint"  width="520px">
   <p align="center">Fig1: Structure de données utilisée pour stocker les grands nombres</p>
-</p></br>
+</p>
+
 L'opération d’insertion se fait toujours en tête de liste, cela permet de réduire la complexité de la conversion (chaîne de caractères → liste chainée)
 en *O(nb)* où *nb* est le nombre de paquets précédemment calculé à l’étape (4).
 
-6. ****Phase de pré-calcul, traitement des cas triviaux et du signe du résultat:****</br>
+6. ****Phase de pré-calcul, traitement des cas triviaux et du signe du résultat:****
    - Calculer \(n1 + n2\) avec *n1* et *n2* de signe différent revient à calculer:</br>
    ![equ](https://render.githubusercontent.com/render/math?math=%5Cbegin%7Bcases%7D%0A%5Cleft%7Cn1%5Cright%7C-%5Cleft%7Cn2%5Cright%7C%5C%3B%5Ctext%7Bsi%7D%5C%3B%5Cleft%7Cn1%5Cright%7C%3E%5Cleft%7Cn2%5Cright%7C%20%5Ctext%7B%3B%20Le%20signe%20du%20r%C3%A9sultat%20est%20celui%20de%20n1%7D%5C%5C%0A%5Cleft%7Cn2%5Cright%7C-%5Cleft%7Cn1%5Cright%7C%5C%3B%5Ctext%7Bsi%7D%5C%3B%5Cleft%7Cn1%5Cright%7C%3C%5Cleft%7Cn2%5Cright%7C%20%5Ctext%7B%3B%20Le%20signe%20du%20r%C3%A9sultat%20est%20celui%20de%20n2%7D%5C%5C%0A0%5C%3B%5Ctext%7B%20sinon.%7D%0A%5Cend%7Bcases%7D)
    - Calculer \(n1 - n2\) avec *n1* et *n2* de signe différent équivaut à calculer \(|n1|+|n2|\); Le signe du résultat est celui de n1.
+   - Calculer \(n1 - n2\) avec *n1* et *n2* sont de même signe revient à calculer:
+   ![equ](https://render.githubusercontent.com/render/math?math=%5Cbegin%7Bcases%7D%0A%5Cleft%7Cn1%5Cright%7C-%5Cleft%7Cn2%5Cright%7C%5C%3B%5Ctext%7Bsi%7D%5C%3B%5Cleft%7Cn1%5Cright%7C%3E%5Cleft%7Cn2%5Cright%7C%20%5Ctext%7B%3B%20Le%20signe%20du%20r%C3%A9sultat%20est%20celui%20de%20n1%7D%5C%5C%0A%5Cleft%7Cn2%5Cright%7C-%5Cleft%7Cn1%5Cright%7C%5C%3B%5Ctext%7Bsi%7D%5C%3B%5Cleft%7Cn1%5Cright%7C%3C%5Cleft%7Cn2%5Cright%7C%20%5Ctext%7B%3B%20Le%20signe%20du%20r%C3%A9sultat%20est%20celui%20de%20n2%7D%5C%5C%0A0%5C%3B%5Ctext%7B%20sinon.%7D%0A%5Cend%7Bcases%7D%0A)
+   - Calculer ![equ](https://render.githubusercontent.com/render/math?math=\frac{n1}{n2}) avec *n2*=0 devrait déclencher une exception d'erreur.
+   - Calculer ![equ](https://render.githubusercontent.com/render/math?math=\frac{n1}{n2}) avec |n1|<|n2| est égale à 0.
+   - etc.
+
+7. ****Implémenter les méthodes et opérations arithmétiques nécessaires.****
 

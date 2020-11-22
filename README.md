@@ -22,13 +22,13 @@ Pour pouvoir manipuler les grands nombres et ses opérations arithmétiques, il 
 ```
 BINT "-" ?[0 -9]+
 ```
-3. #### Déterminer la taille de paquet convenable à l’opération arithmétique choisie:</br>
+3. Déterminer la taille de paquet convenable à l’opération arithmétique choisie:</br>
 Un paquet de type *unsigned long long int* peut stocker jusqu’à 20 chiffres
 (ULLONG_MAX = 2<sup>64</sup> − 1 = 18446744073709551615)</br></br>
 Nous voulons garantir que:</br>
 ∀*p1, p2* deux paquets de taille *n* chiffres, ∀α ∈ {+, −, ∗, /, %}</br>
 *p1αp2 = p3* avec *p3* est un paquet de taille toujours inférieure ou égale à *n*.</br>
-   1. ##### La formule pour calculer la taille maximale des paquets pour les opérations +, -, /, % :</br>
+   1. La formule pour calculer la taille maximale des paquets pour les opérations +, -, /, % :</br>
 ![equ](https://render.githubusercontent.com/render/math?math=\text{max\_p}%20=%20\text{nombre\_chiffres(ULLONG\_MAX)}-2)</br>
 En langage C: 
    ```c

@@ -17,31 +17,31 @@ s'agit notamment de munir cette structure par les opérations arithmétiques tel
 Exemple: <img src="img/i1.png" alt="738....393+1235....238" height="32px" />
 
 Pour pouvoir manipuler les grands nombres et ses opérations arithmétiques, il faut franchir plusieurs étapes:
-1. #### Lire les deux nombres entrés par l’utilisateur comme une chaîne de caractères.
-2. #### Vérifier lexicalement la chaîne de caractères:
+1. ****Lire les deux nombres entrés par l’utilisateur comme une chaîne de caractères.****
+2. ****Vérifier lexicalement la chaîne de caractères:****
 ```
 BINT "-" ?[0 -9]+
 ```
-3. Déterminer la taille de paquet convenable à l’opération arithmétique choisie:</br>
+3. ****Déterminer la taille de paquet convenable à l’opération arithmétique choisie:****</br>
 Un paquet de type *unsigned long long int* peut stocker jusqu’à 20 chiffres
 (ULLONG_MAX = 2<sup>64</sup> − 1 = 18446744073709551615)</br></br>
 Nous voulons garantir que:</br>
 ∀*p1, p2* deux paquets de taille *n* chiffres, ∀α ∈ {+, −, ∗, /, %}</br>
 *p1αp2 = p3* avec *p3* est un paquet de taille toujours inférieure ou égale à *n*.</br>
-   1. La formule pour calculer la taille maximale des paquets pour les opérations +, -, /, % :</br>
-![equ](https://render.githubusercontent.com/render/math?math=\text{max\_p}%20=%20\text{nombre\_chiffres(ULLONG\_MAX)}-2)</br>
-En langage C: 
+   1. ##### La formule pour calculer la taille maximale des paquets pour les opérations +, -, /, % :</br>
+   ![equ](https://render.githubusercontent.com/render/math?math=\text{max\_p}%20=%20\text{nombre\_chiffres(ULLONG\_MAX)}-2)</br>
+   En langage C: 
    ```c
    max_p = snprintf(NULL , 0 , "%llu", ULLONG_MAX) - 2;
    ```
    2. ##### La formule pour calculer la taille de paquet pour l’opération de multiplication ∗ est:</br>
-![equ](https://render.githubusercontent.com/render/math?math=\text{max\_p}%20=%20\frac{\text{nombre\_chiffres(ULLONG\_MAX)}}{2}-1)</br>
-En langage C:
+   ![equ](https://render.githubusercontent.com/render/math?math=\text{max\_p}%20=%20\frac{\text{nombre\_chiffres(ULLONG\_MAX)}}{2}-1)</br>
+   En langage C:
    ```c
    max_p = snprintf(NULL , 0 , "%llu", ULLONG_MAX)/2 - 1;
    ```
-4. #### Déterminer le nombre de paquets à insérer pour une chaîne donnée:
+4. ****Déterminer le nombre de paquets à insérer pour une chaîne donnée:****
    - Le nombre de paquets:</br>![equ](https://render.githubusercontent.com/render/math?math=$nb%20=%20\frac{\text{strlen(str)}}{\text{max\_p}}$)
    - La taille du dernier paquet à insérer:</br>last_p = strlen(str) (*mod* max_p)</br>
    ![equ](https://render.githubusercontent.com/render/math?math=Avec%3A%5Cbegin%7Bcases%7D%0A%5Ctextit%7Bstrlen()%3A%7D%5Ctext%7Best%20une%20fonction%20qui%20permet%20de%20calculer%20la%20longueur%20d'une%20cha%C3%AEne%20de%20caract%C3%A8res%7D%5C%5C%0A%20%20%5Ctextit%7Bstr%3A%7D%5Ctext%7Best%20la%20cha%C3%AEne%20entr%C3%A9%20par%20l'utilisateur%7D%5C%5C%0A%5Ctextit%7Bmax%5C_p%3A%7D%5Ctext%7Best%20la%20taille%20de%20paquet%20calcul%C3%A9e%20pr%C3%A9c%C3%A9demment%20%C3%A0%20l'%C3%A9tape%20(3)%7D%5C%5C%0A%5Cend%7Bcases%7D)
-5. #### Insérer les paquets dans une structure de données chaînée
+5. ****Insérer les paquets dans une structure de données chaînée****

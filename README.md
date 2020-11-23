@@ -27,7 +27,7 @@ Pour pouvoir manipuler les grands nombres et ses opérations arithmétiques, il 
 1. ****Lire les deux nombres entrés par l’utilisateur comme une chaîne de caractères.****
 2. ****Vérifier lexicalement la chaîne de caractères:****
 ```
-BINT "-" ?[0 -9]+
+BINT \-?[0-9]+
 ```
 3. ****Déterminer la taille de paquet convenable à l’opération arithmétique choisie:****</br>
 Un paquet de type *unsigned long long int* peut stocker jusqu’à 20 chiffres

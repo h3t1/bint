@@ -1,5 +1,5 @@
 ## Implémentation des opérations arithmétiques sur les grands nombres
-Bint est un programme qui calcule le résultat d'une opération arithmétique sur deux grands nombres à l'aide de structures de données personnalisées;
+**BINT** est un programme qui calcule le résultat d'une opération arithmétique {+, −, ∗, /, %} sur deux grands nombres à l'aide de structures de données personnalisées;
 L'interface graphique de ce projet a été réalisé à l’aide de l’API Win32.
 <p align="center">
   <img src="img/i0.png" alt="Bint"  width="420px">

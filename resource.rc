@@ -16,15 +16,16 @@ IDR_MENU MENU
     }
 }
 
-IDD_ABOUT DIALOG 0, 0, 225, 89
+IDD_ABOUT DIALOG 0, 0, 225, 80
 STYLE DS_CENTER | DS_MODALFRAME | DS_SHELLFONT | WS_CAPTION | WS_VISIBLE | WS_POPUP | WS_SYSMENU
 EXSTYLE WS_EX_WINDOWEDGE
 CAPTION "À propos"
 FONT 8, "Ms Shell Dlg"
 {
-    LTEXT           "Manipulation des grands nombres avec listes chainées\r\nAuteur: Hamza Talaghzi\r\nVersion: 1.00\r\n\r\nInterface graphique réalisée à l'aide de l'API Win32", 0, 13, 21, 198, 33, SS_LEFT, WS_EX_LEFT
-    GROUPBOX        "", 0, 5, 5, 215, 60, 0, WS_EX_LEFT
-    DEFPUSHBUTTON   "OK", IDOK, 170, 70, 50, 14, 0, WS_EX_LEFT
+    LTEXT           "Implémentation des opérations arithmétiques sur les grands nombres
+                    "réalisé par Hamza Talaghzi; \r\n", 0, 13, 21, 198, 40, SS_LEFT, WS_EX_LEFT
+    GROUPBOX        "Bint v1.01", 0, 5, 5, 215, 42, 0, WS_EX_LEFT
+    DEFPUSHBUTTON   "OK", IDOK, 170, 56, 44, 14, 0, WS_EX_LEFT
 }
 ACC ACCELERATORS
 {

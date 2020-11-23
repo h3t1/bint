@@ -1,5 +1,12 @@
 ## Implémentation des opérations arithmétiques sur les grands nombres
+Bint est un programme qui calcule le résultat d'une opération arithmétique sur deux grands nombres à l'aide de structures de données personnalisées;
+L'interface graphique de ce projet a été réalisé à l’aide de l’API Win32.
+<p align="center">
+  <img src="img/i0.png" alt="Bint"  width="420px">
+  <p align="center">Fig1: Exemple de calcul effectué par le programme</p>
+</p>
 
+### I - Problèmatique:
 Les grands nombres sont largement utilisés dans de nombreuses applications:
 - Cryptographie : RSA (par exemple)
 - Signature des documents
@@ -15,7 +22,7 @@ s'agit notamment de munir cette structure par les opérations arithmétiques tel
 ( n chiffres ) OP ( m chiffres )
 ```
 Exemple: <img src="img/i1.png" alt="738....393+1235....238" height="32px" />
-
+### II - Méthodologie:
 Pour pouvoir manipuler les grands nombres et ses opérations arithmétiques, il faut franchir plusieurs étapes:
 1. ****Lire les deux nombres entrés par l’utilisateur comme une chaîne de caractères.****
 2. ****Vérifier lexicalement la chaîne de caractères:****
@@ -47,7 +54,7 @@ Nous voulons garantir que:</br>
 5. ****Insérer les paquets dans une structure de données chaînée**** (Voir la figure ci-dessous)
 <p align="center">
   <img src="img/i2.png" alt="Bint"  width="520px">
-  <p align="center">Fig1: Structure de données utilisée pour stocker les grands nombres</p>
+  <p align="center">Fig2: Structure de données utilisée pour stocker les grands nombres</p>
 </p>
 
 L'opération d’insertion se fait toujours en tête de liste, cela permet de réduire la complexité de la conversion (chaîne de caractères → liste chainée)
